@@ -1,0 +1,342 @@
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f5f7fa;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.login-card {
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  height: 550px;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.login-left {
+  width: 38%;
+  background-color: #008080;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?q=80&w=1200&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.login-left-content {
+  position: relative;
+  z-index: 1;
+}
+
+.login-left h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.login-left p {
+  font-size: 16px;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+.login-right {
+  width: 62%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.login-form-wrapper {
+  max-width: 350px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.login-header {
+  margin-bottom: 25px;
+}
+
+.login-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.login-header p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.login-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #333;
+  font-size: 14px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #f9fafb;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #008080;
+  box-shadow: 0 0 0 2px rgba(0, 128, 128, 0.1);
+  background-color: #fff;
+}
+
+.password-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.forgot-link {
+  font-size: 12px;
+  color: #008080;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.remember-me {
+  margin-bottom: 20px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #666;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #f9fafb;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #f0f0f0;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #008080;
+  border-color: #008080;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.sign-in-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #008080;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.sign-in-btn:hover {
+  background-color: #006666;
+}
+
+.login-footer {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+}
+
+.login-footer a {
+  color: #008080;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+  .login-card {
+    max-width: 800px;
+    height: 500px;
+  }
+  
+  .login-left {
+    padding: 25px;
+  }
+  
+  .login-right {
+    padding: 25px;
+  }
+  
+  .login-left h1 {
+    font-size: 24px;
+  }
+  
+  .login-left p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 900px) {
+  .login-card {
+    flex-direction: column;
+    height: auto;
+    max-height: 90vh;
+  }
+  
+  .login-left {
+    width: 100%;
+    padding: 25px;
+    min-height: 150px;
+  }
+  
+  .login-right {
+    width: 100%;
+    padding: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    padding: 10px;
+  }
+  
+  .login-card {
+    border-radius: 8px;
+  }
+  
+  .login-left {
+    padding: 20px;
+    min-height: 120px;
+  }
+  
+  .login-right {
+    padding: 20px;
+  }
+  
+  .login-header h2 {
+    font-size: 22px;
+  }
+  
+  .form-group input {
+    padding: 9px 12px;
+  }
+  
+  .sign-in-btn {
+    padding: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 8px;
+  }
+  
+  .login-left {
+    padding: 15px;
+    min-height: 100px;
+  }
+  
+  .login-right {
+    padding: 15px;
+  }
+  
+  .login-header h2 {
+    font-size: 20px;
+  }
+  
+  .login-left h1 {
+    font-size: 20px;
+  }
+}
