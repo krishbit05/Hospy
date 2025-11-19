@@ -138,7 +138,7 @@ function Signup() {
                   <option value="receptionist">Receptionist</option>
                   <option value="doctor">Doctor</option>
                   <option value="lab_staff">Lab Staff</option>
-                  <option value="admin">Admin</option>
+                  {/* <option value="admin">Admin</option> */}
                   <option value="patient">patient</option>
                 </select>
               </div>
